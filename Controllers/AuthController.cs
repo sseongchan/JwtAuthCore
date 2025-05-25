@@ -17,10 +17,10 @@ namespace JwtAuthSample.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class AuthController(IOptions<JwtSettings> jwtSettings, UserService userService) : ControllerBase
+    public class AuthController(IOptions<JwtSettings> jwtSettings, IUserService userService) : ControllerBase
     {
         private readonly JwtSettings _jwtSettings = jwtSettings.Value;
-        private readonly UserService _userService = userService;
+        private readonly IUserService _userService = userService;
 
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginRequest request)

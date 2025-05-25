@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace JwtAuthSample.Modules.User.Services
 {
-    public class UserService(IUserRepository userRepository)
+    public class UserService(IUserRepository userRepository) : IUserService
     {
         private readonly IUserRepository _userRepository = userRepository;
         private readonly PasswordHasher<UserCreateRequest> _passwordHasher = new();

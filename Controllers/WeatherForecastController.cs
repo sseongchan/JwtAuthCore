@@ -1,3 +1,4 @@
+using JwtAuthSample.Modules.User.Dtos;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 

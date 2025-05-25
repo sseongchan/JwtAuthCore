@@ -6,9 +6,9 @@ namespace JwtAuthSample.Modules.User.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class UserController(UserService userService) : ControllerBase
+    public class UserController(IUserService userService) : ControllerBase
     {
-        private readonly UserService _userService = userService;
+        private readonly IUserService _userService = userService;
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<UserDto>>> GetAll()

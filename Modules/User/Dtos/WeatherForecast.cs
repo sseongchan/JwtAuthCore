@@ -1,4 +1,4 @@
-namespace JwtAuthSample
+namespace JwtAuthSample.Modules.User.Dtos
 {
     public class WeatherForecast
     {
